@@ -24,5 +24,21 @@ namespace HelloWPF
         {
             InitializeComponent();
         }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Full Name: ");
+            sb.Append(FullName.Text);
+            sb.Append(" Sex: ");
+            sb.Append((bool)Male.IsChecked ? "Male" : "Female");
+            sb.Append(" Computer: ");
+            sb.Append((bool)Desktop.IsChecked ? "Desktop" : "");
+            sb.Append((bool)Laptop.IsChecked ? "Laptop" : "");
+            sb.Append((bool)Tablet.IsChecked ? "Tablet" : "");
+            sb.Append(" Job: ");
+            sb.Append(Job.SelectedValue.ToString());
+
+        }
     }
 }
